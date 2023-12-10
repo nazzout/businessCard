@@ -1,0 +1,138 @@
+/* Animation of the card */
+
+@keyframes movingGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style of the card */
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background: linear-gradient(
+        45deg,
+        rgba(47, 201, 226, 0.7), 
+        rgba(28, 127, 238, 0.7),
+        rgba(95, 21, 242, 0.7), 
+        rgba(186, 12, 248, 0.7),
+        rgba(251, 7, 217, 0.7)
+    ),
+    #19191a;
+    background-size: 200% 200%;
+    background-blend-mode: overlay;
+    animation: movingGradient 8s ease infinite;
+    max-height: auto;
+    min-height: auto;
+}
+
+.text-wrapper, .content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding-block: 100px;
+    max-block-size: 500px;
+}
+
+/* Main heading in the card */
+
+.text-wrapper .title h4 {
+    font-family: 'Archivo', serif;
+    font-size: 50px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 200px;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    justify-content: left;
+    margin-right: 300px;
+}
+
+/* Content in the card */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    margin-right: 150px;
+    margin-left: 150px;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    margin: 100px;
+    color: #ffffff;
+    gap: 10px;
+    line-height: 2px;
+}
+
+.content h3 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    font-style: bolder;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.content p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+
+}
+
+/* Image in the card */
+
+.img-container .img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    max-block-size: 500px;
+    min-block-size: 200px;
+}
+
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgb(183, 0, 255), rgb(225, 45, 114));
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+    animation: animate 0.4s ease-in-out infinite;
+    box-shadow: 0px 0px 50px 10px red;
+}
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+a {
+    /* Example styles */
+    text-decoration: none; /* Removes underline */
+    color: blue; /* Sets text color, if any */
+}

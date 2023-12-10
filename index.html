@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    </head>
+    <body>
+        <div class="card">
+            <div class="circle">
+            </div>
+            <script>
+                var circle = document.querySelector(".circle");
+                document.addEventListener("mousemove", function(e) {
+                    circle.style.top = e.pageY + "px";
+                    circle.style.left = e.pageX + "px";
+                });
+            </script>
+            <div class="text-wrapper"> 
+            <div class="title">
+                <a href="https://www.linkedin.com/in/natalie-peckham-78134756/">
+                <h4>UX UI Lead + <br> Frontend Dev</h4>
+            </a>
+            </div>
+            </div>
+            <div class="img-container">
+                <img class="img" src="/images/nazz2.jpg" alt="Profile Image">
+            </div>
+            <div class="content">
+                <h3>Natalie Peckham</h3>
+                <p>Los Angeles, CA</p>
+            </div>
+        </div>
+    </body>
+</html>
